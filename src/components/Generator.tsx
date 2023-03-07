@@ -2,6 +2,7 @@ import type { ChatMessage } from '@/types'
 import { createSignal, Index, Show } from 'solid-js'
 import IconClear from './icons/Clear'
 import IconRand from './icons/Rand'
+import IconSend from './icons/Send'
 import MessageItem from './MessageItem'
 import SystemRoleSettings from './SystemRoleSettings'
 import Qustion from './Question.js'
@@ -172,7 +173,7 @@ export default () => {
       <div class="flex items-center">
         
         <div onClick={randQuestion}>
-          <span class="inline-flex items-center justify-center gap-1 text-sm text-slate bg-slate/20 px-2 py-1 rounded-md transition-colors cursor-pointer hover:bg-slate/50 ml-2 ">
+          <span class="inline-flex items-center justify-center gap-1 text-sm text-slate bg-slate/20 px-2 py-1 rounded-md transition-colors cursor-pointer hover:bg-slate/50">
             <IconRand />
             <span>随便问问</span>
           </span>
@@ -224,7 +225,7 @@ export default () => {
               inputRef.style.height = 'auto';
               inputRef.style.height = inputRef.scrollHeight + 'px';
             }}
-            rows="1"
+            rows="3"
             w-full
             px-3 py-3
             min-h-12
@@ -241,11 +242,15 @@ export default () => {
             placeholder:op-30
             scroll-pa-8px
           />
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} h-12 px-2 py-2 bg-slate bg-op-15 hover:bg-op-20 text-slate rounded-sm w-20>
-            发送
+        </div>
+        <div class="flex items-center">
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-2 py-2 bg-green bg-op-15 hover:bg-op-20 text-slate rounded-sm w-40>
+          <IconRand />
+          发送
           </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} h-12 px-4 py-2 bg-slate bg-op-15 hover:bg-op-20 text-slate rounded-sm>
+          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-4 py-2 bg-slate bg-op-15 hover:bg-op-20 text-slate rounded-sm ml-2>
             <IconClear />
+            清空
           </button>
         </div>
       </Show>
