@@ -28,7 +28,7 @@ A demo repo based on [OpenAI GPT-3.5 Turbo API](https://platform.openai.com/docs
 
 ## Creative Forked Versions
 
-- [ourongxing/chatgpt-vercel](https://github.com/ourongxing/chatgpt-vercel)
+- [payhon/chatgpt-proxy](https://github.com/payhon/chatgpt-proxy)
 
 ## License
 

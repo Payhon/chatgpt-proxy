@@ -170,7 +170,7 @@ export default () => {
   return (
     <div my-3>
       <div class="flex items-center">
-        <p mt-1 text-slate op-60>欢迎来到人工智能时代</p>
+        
         <div onClick={randQuestion}>
           <span class="inline-flex items-center justify-center gap-1 text-sm text-slate bg-slate/20 px-2 py-1 rounded-md transition-colors cursor-pointer hover:bg-slate/50 ml-2 ">
             <IconRand />
@@ -217,7 +217,7 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="可输入任意问题"
+            placeholder="在对话框输入任何您想问的问题或者点击上面的按钮辅助输入"
             autocomplete="off"
             autofocus
             onInput={() => {
