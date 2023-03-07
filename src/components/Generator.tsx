@@ -225,7 +225,7 @@ export default () => {
               inputRef.style.height = 'auto';
               inputRef.style.height = inputRef.scrollHeight + 'px';
             }}
-            rows="3"
+            rows="4"
             w-full
             px-3 py-3
             min-h-12
@@ -244,11 +244,11 @@ export default () => {
           />
         </div>
         <div class="flex items-center">
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-2 py-2 bg-green bg-op-15 hover:bg-op-20 text-slate rounded-sm w-40>
-          <IconRand />
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-2 py-2 bg-green bg-op-15 hover:bg-op-20 text-slate rounded-sm w-65>
+          <IconSend />
           发送
           </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-4 py-2 bg-slate bg-op-15 hover:bg-op-20 text-slate rounded-sm ml-2>
+          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} inline-flex items-center justify-center gap-1 h-12 px-4 py-2 bg-slate bg-op-15 hover:bg-op-20 text-slate rounded-sm ml-2 w-30>
             <IconClear />
             清空
           </button>
